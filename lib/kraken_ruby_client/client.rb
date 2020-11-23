@@ -47,6 +47,11 @@ module Kraken
       @api_private_url      = base_uri + @api_private_path
     end
 
+    # Get ledgers info
+    def ledgers
+      post_private 'Ledgers'
+    end
+
     # Get server time
     # URL: https://api.kraken.com/0/public/Time
     # Returns a hash with keys +error+ and +result+.
